@@ -36,6 +36,7 @@
 
     --black: #000;
     --pink: #ff3258;
+    --fade: #3caea3;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -176,8 +177,9 @@ h3 {
 p {
     margin: var(--gutter-small-1) 0;
 }
+
 ul {
-    list-style-type: box; /* Removes default bullet points */
+     /* Removes default bullet points */
     padding-left: 40px;    /* Indent the entire list from the left */
 }
 
@@ -214,7 +216,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link:hover {
-    color: var(--pink);
+    color: var(--fade);
 }
 
 .btn {
@@ -223,7 +225,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--pink);
+    border: 1px solid  var(--fade);
     font-weight: 400;
 }
 
@@ -247,11 +249,11 @@ body:not(.user-is-tabbing) a:focus {
 .btn:hover::after,
 .btn:focus::after {
     right: 0;
-    background: var(--pink);
+    background: var(--fade);
 }
 
 .btn--pink {
-    background: var(--pink);
+    background: var(--fade);
     transition: all 0.2s;
 }
 
@@ -559,6 +561,10 @@ body:not(.user-is-tabbing) a:focus {
 @media(min-width: 901px) {
     .about__text {
         flex: 0 0 35%;
+    }
+    .about__text .list-title {
+        padding: 10px;
+        margin-bottom: 10px;
     }
     
     .about__photo-container {
