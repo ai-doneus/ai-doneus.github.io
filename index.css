@@ -47,6 +47,7 @@
     --container-medium-width: 700px; 
     --container-small-width: 500px;
 
+    --gutter-huger: 18rem;
     --gutter-huge: 12rem;
     --gutter-medium: 6rem;
     --gutter-normal: 3rem;
@@ -156,6 +157,7 @@ h2::after {
     margin: var(--gutter-small) 0;
 }
 
+
 h3 {
     font-size: var(--font-size-medium-1);
     margin-bottom: var(--gutter-small);
@@ -178,6 +180,7 @@ h3 {
 p {
     margin: var(--gutter-small-1) 0;
 }
+
 
 ul {
     padding-left: 40px;    /* Indent the entire list from the left */
@@ -347,6 +350,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: var(--gutter-normal) 0;
 }
 
+
 .nav__items {
     display: flex;
     list-style: none;
@@ -355,6 +359,7 @@ body:not(.user-is-tabbing) a:focus {
 .nav__item:not(:last-child) {
     margin-right: var(--gutter-medium);
 }
+
 
 @media(max-width: 500px) {
     .nav {
@@ -531,6 +536,8 @@ body:not(.user-is-tabbing) a:focus {
     font-size: 1.75em;
     clear: both;
   }
+
+
   
   /* Styling for Author */
 .quote-author {

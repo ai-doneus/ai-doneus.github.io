@@ -49,7 +49,8 @@
 
 let quotesData;
 var currentQuote = '',
-currentAuthor = '';
+currentAuthor = '',
+currentQuote1 = '';
 /*
 var colors = [
   '#16a085',
@@ -92,7 +93,8 @@ function getRandomQuote() {
 
 function getQuote() {
   let randomQuote = getRandomQuote();
-
+  let randomQuote1 = getRandomQuote();
+  currentQuote1 = randomQuote1.quote;
   currentQuote = randomQuote.quote;
   currentAuthor = randomQuote.author;
  /*
@@ -114,6 +116,7 @@ function getQuote() {
   $('.quote-text').animate({ opacity: 0 }, 500, function () {
     $(this).animate({ opacity: 1 }, 500);
     $('#text').text(randomQuote.quote);
+    $('#text1').text(randomQuote1.quote);
   });
 
   $('.quote-author').animate({ opacity: 0 }, 500, function () {
