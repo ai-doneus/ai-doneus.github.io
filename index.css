@@ -39,6 +39,7 @@
     --fade: #3caea3;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
+    --gray: #525260da;
 
 
     --container-max-width: 1180px;
@@ -179,7 +180,6 @@ p {
 }
 
 ul {
-     /* Removes default bullet points */
     padding-left: 40px;    /* Indent the entire list from the left */
 }
 
@@ -510,7 +510,119 @@ body:not(.user-is-tabbing) a:focus {
         height: 4rem;
     }
 }
+/* --------------------------------------- */
+/* ----- Quote ----- */
+/* --------------------------------------- */
+/* Quote Box Styling */
+.quote-box {
+    border-radius: 3px;
+    width: 600px;
+    padding: 40px 50px;
+    background-color: var(--gray); /* Assuming --black is defined */
+    display: table;
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  /* Quote Text Styling */
+.quote-text {
+    text-align: center;
+    width: 450px;
+    font-weight: 500;
+    font-size: 1.75em;
+    clear: both;
+  }
+  
+  /* Styling for Author */
+.quote-author {
+    font-size: 1.2em;
+    font-style: italic;
+    color: var(--white); /* Light grey for the author's name */
+    margin-top: 10px;  /* Add some space above the author's name */
+    width: 450px;
+    height: auto;
+    clear: both;
+    padding-top: 20px;
+    font-size: 1em;
+    text-align: right;
+  }
+  
+  /* Optional: If you want to style the <i> tag inside the .quote-author */
+.quote-author i {
+    font-size: 1em;
+    margin-right: 0.4em;
+    
+  }
+  
+/*
+.quote-box {
+    border-radius: 3px;
+    position: center;
+    /*margin:8% auto auto auto;
+    width: 450px;
+    padding: 40px 50px;
+    display: table;
+    background-color:var(--black);
 
+    .quote-text {
+      i {
+        font-size: 0.75em;
+        margin-right: 0.4em;
+      }
+      text-align: center;
+      width: 450px;
+      height: auto;
+      clear: both;
+      font-weight: 500;
+      font-size: 1.75em;
+    }
+
+
+    .quote-author {
+      width: 450px;
+      height: auto;
+      clear: both;
+      padding-top: 20px;
+      font-size: 1em;
+      text-align: right;
+    }
+    .buttons {
+      width: 450px;
+      margin: auto;
+      display: block;
+      .button {
+        height: 38px;
+        border: none;
+        border-radius: 3px;
+        color:var(--white);
+        background-color: var(--fade);
+        outline: none;
+        font-size: 0.85em;
+        padding: 8px 18px 6px 18px;
+        margin-top: 30px;
+        opacity: 1;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.9;
+        }
+        /*
+        &#tweet-quote,
+        &#tumblr-quote {
+          float: left;
+          padding: 0px;
+          padding-top: 8px;
+          text-align: center;
+          font-size: 1.2em;
+          margin-right: 5px;
+          height: 30px;
+          width: 40px;
+        }
+        &#new-quote {
+          float: right;
+        }
+      }
+    }
+  }
+    */
 /* --------------------------------------- */
 /* ----- Clients ----- */
 /* --------------------------------------- */
@@ -561,6 +673,7 @@ body:not(.user-is-tabbing) a:focus {
 @media(min-width: 901px) {
     .about__text {
         flex: 0 0 35%;
+        margin-bottom: 30px;
     }
     .about__text .list-title {
         padding: 10px;
