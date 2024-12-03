@@ -553,7 +553,7 @@ body:not(.user-is-tabbing) a:focus {
     text-align: right;
   }
   
-  /* Optional: If you want to style the <i> tag inside the .quote-author */
+/* Optional: If you want to style the <i> tag inside the .quote-author */
 .quote-author i {
     font-size: 1em;
     margin-right: 0.4em;
