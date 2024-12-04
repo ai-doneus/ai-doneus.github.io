@@ -184,6 +184,7 @@ p {
 
 ul {
     padding-left: 40px;    /* Indent the entire list from the left */
+    margin-bottom: var(--gutter-normal);
 }
 
 @media(max-width: 900px) {
@@ -343,7 +344,30 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Navigation ----- */
 /* --------------------------------------- */
+.nav__item__1 {
+    display: flex;
+    justify-content: flex-end;
+    float: left;
+    padding: var(--gutter-normal) 0;
+    margin-left: var(--gutter-medium);
+}
+@media(max-width: 500px) {
+    .nav__item__1 {
+        justify-content: center;
+    }
+}
 
+@media(max-width: 400px) {
+    .nav__item__1:not(:last-child) {
+        margin-left: var(--gutter-normal);
+    }
+}
+
+@media(max-width: 300px) {
+    .nav__item__1 {
+        font-size: var(--font-size-small);
+    }
+}
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -355,6 +379,7 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     list-style: none;
 }
+
 
 .nav__item:not(:last-child) {
     margin-right: var(--gutter-medium);
@@ -440,6 +465,8 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .header {
         text-align: center;
+        background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+            url('./images/header-4.jpg');
     }
 
     .header__text p {
@@ -527,7 +554,24 @@ body:not(.user-is-tabbing) a:focus {
     display: table;
     margin: 0 auto; /* Center horizontally */
   }
-  
+/* For smaller screens (max-width: 500px) */
+
+@media (max-width: 500px) {
+    .quote-box {
+        width: 90%; /* 90% of the viewport width */
+        padding: 20px; /* Adjust padding for smaller screens */
+        margin-bottom: 20rem; /* Use a smaller margin for better spacing */
+    }
+}
+
+/* For medium screens (min-width: 401px and max-width: 768px) */
+@media (min-width: 401px) and (max-width: 768px) {
+    .quote-box {
+        width: 300px; /* Reduce width on medium screens */
+        padding: 30px; /* Slightly smaller padding */
+        margin-bottom: 20rem;
+    }
+}
   /* Quote Text Styling */
 .quote-text {
     text-align: center;
@@ -537,7 +581,20 @@ body:not(.user-is-tabbing) a:focus {
     clear: both;
   }
 
+@media (max-width: 500px) {
+    .quote-text {
+        width: 300px; /* 90% of the viewport width */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
 
+/* For medium screens (min-width: 401px and max-width: 768px) */
+@media (min-width: 401px) and (max-width: 768px) {
+    .quote-text {
+        width: 300px; /* Reduce width on medium screens */
+        padding: 30px; /* Slightly smaller padding */
+    }
+}
   
   /* Styling for Author */
 .quote-author {
@@ -553,6 +610,21 @@ body:not(.user-is-tabbing) a:focus {
     text-align: right;
   }
   
+@media (max-width: 500px) {
+    .quote-author {
+        width: 300px; /* 90% of the viewport width */
+        padding: 20px; /* Adjust padding for smaller screens */
+        
+    }
+}
+
+/* For medium screens (min-width: 401px and max-width: 768px) */
+@media (min-width: 401px) and (max-width: 768px) {
+    .quote-author {
+        width: 300px; /* Reduce width on medium screens */
+        padding: 30px; /* Slightly smaller padding */
+    }
+}
 /* Optional: If you want to style the <i> tag inside the .quote-author */
 .quote-author i {
     font-size: 1em;
@@ -633,7 +705,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Clients ----- */
 /* --------------------------------------- */
-
+/* 
 .client__logos {
     display: flex;
     justify-content: space-between;
@@ -654,7 +726,7 @@ body:not(.user-is-tabbing) a:focus {
     .client__logo:not(:last-of-type) {
         margin-right: var(--gutter-medium);
     }
-}
+} */
 
 /* --------------------------------------- */
 /* ----- About ----- */
@@ -664,6 +736,7 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    margin-bottom: var(--gutter-normal);
 }
 
 @media(max-width: 900px) {
